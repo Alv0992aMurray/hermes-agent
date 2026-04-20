@@ -2,6 +2,8 @@
 
 A fork of [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — an agentic AI assistant powered by Hermes models with tool-calling capabilities.
 
+> **Personal fork** — I'm using this for local experimentation with Ollama. My typical setup uses `hermes3` via Ollama on port 11434.
+
 ## Features
 
 - 🤖 **Hermes Model Integration** — Optimized for NousResearch Hermes model family
@@ -49,6 +51,16 @@ Key variables:
 | `MODEL_NAME` | Model identifier to use | `NousResearch/Hermes-3-Llama-3.1-8B` |
 | `MAX_TOKENS` | Maximum tokens per response | `4096` |
 | `TEMPERATURE` | Sampling temperature | `0.7` |
+
+#### Ollama Setup
+
+If you're running Ollama locally, set these in your `.env`:
+
+```
+OPENAI_API_BASE=http://localhost:11434/v1
+OPENAI_API_KEY=none
+MODEL_NAME=hermes3
+```
 
 ### Running
 
