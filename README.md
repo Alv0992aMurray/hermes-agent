@@ -61,9 +61,12 @@ OPENAI_API_BASE=http://localhost:11434/v1
 OPENAI_API_KEY=none
 MODEL_NAME=hermes3
 TEMPERATURE=0.5
+MAX_TOKENS=8192
 ```
 
 > **Note:** I find `TEMPERATURE=0.5` gives more consistent tool-calling behavior with `hermes3` on Ollama compared to the default `0.7`. Your mileage may vary.
+
+> **Note:** Bumped `MAX_TOKENS` to `8192` for Ollama — the default `4096` was occasionally cutting off longer tool responses mid-output.
 
 ### Running
 
@@ -110,6 +113,3 @@ Please use the [issue templates](.github/ISSUE_TEMPLATE/) for bug reports and fe
 MIT License — see [LICENSE](LICENSE) for details.
 
 ## Acknowledgements
-
-- [NousResearch](https://nousresearch.com/) for the original hermes-agent and Hermes model family
-- The open-source LLM community
