@@ -70,6 +70,8 @@ MAX_TOKENS=8192
 
 > **Note:** If Ollama returns connection errors on startup, make sure the Ollama service is actually running (`ollama serve`) before launching the agent. Took me an embarrassingly long time to figure that one out.
 
+> **Note:** On macOS, Ollama sometimes goes to sleep after inactivity and the first request will time out. Running `ollama run hermes3` in a separate terminal to warm it up before starting the agent helps.
+
 ### Running
 
 ```bash
@@ -98,14 +100,5 @@ hermes_agent/
 ├── agent.py           # Core agent loop
 ├── tools/             # Tool definitions and implementations
 ├── prompts/           # System prompts and templates
-└── utils/             # Utility functions
+└── util
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feat/my-feature`)
-3. Commit your changes
-4. Open a Pull Request
-
-Please use the [issue tem
