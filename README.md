@@ -68,6 +68,8 @@ MAX_TOKENS=8192
 
 > **Note:** Bumped `MAX_TOKENS` to `8192` for Ollama — the default `4096` was occasionally cutting off longer tool responses mid-output.
 
+> **Note:** If Ollama returns connection errors on startup, make sure the Ollama service is actually running (`ollama serve`) before launching the agent. Took me an embarrassingly long time to figure that one out.
+
 ### Running
 
 ```bash
@@ -106,10 +108,4 @@ hermes_agent/
 3. Commit your changes
 4. Open a Pull Request
 
-Please use the [issue templates](.github/ISSUE_TEMPLATE/) for bug reports and feature requests.
-
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
-
-## Acknowledgements
+Please use the [issue tem
